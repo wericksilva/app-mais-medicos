@@ -1,0 +1,93 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro de médicos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <form (ngSubmit)="cadastrar()">
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="medico.nome" name="nome"  placeholder="Primeiro nome" >
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="medico.sobrenome" name="sobrenome"  placeholder="Ultimo nome"  >
+          </ion-input>  
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="medico.email" name="email"  placeholder="Email"  >
+              </ion-input> 
+          </ion-item>
+
+          <ion-list>
+              <ion-item>
+                <ion-label>Especialidade  </ion-label>
+                <ion-select [(ngModel)]="medico.especialidade" name="especialidade">
+                    <ion-option value="Cardiologista" >Cardiologista</ion-option>
+                    <ion-option value="Cirurgia geral" >Cirurgia geral</ion-option>
+                    <ion-option value="Clinica Medica" >Clínica Médica</ion-option>
+                    
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+          <ion-item>
+              <ion-label>Ativo</ion-label>
+              <ion-checkbox color="blue" [(ngModel)]="medico.ativo"
+               name="ativo" checked="true"></ion-checkbox>
+          </ion-item>
+
+
+
+<ion-list radio-group [(ngModel)]="medico.status" name="status">
+    <ion-list-header>
+      Status
+    </ion-list-header>
+  
+    <ion-item>
+      <ion-label>Ocupado</ion-label>
+      <ion-radio checked="true" value="false"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Disponivel</ion-label>
+      <ion-radio value="true"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+        <ion-item>
+          <ion-label>Estado</ion-label>
+          <ion-select [(ngModel)]="medico.estado" name="estado">
+              <ion-option value="AC" >Acre</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+          <ion-item>
+            <ion-label>Cidade</ion-label>
+            <ion-select [(ngModel)]="medico.cidade" name="cidade">
+              <ion-option value="Brasiléia">Brasiléia</ion-option>
+              <ion-option value="Bujari">Bujari</ion-option>
+              <ion-option value="Capixaba">Capixaba</ion-option>
+              <ion-option value="Jordão">Jordão</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+  
+    
+        
+        <button ion-button type="submit">Cadastrar</button>
+        
+      </form>
+      <!--<button ion-button type="submit" color="light">Cancelar</button>
+      -->
+</ion-content>

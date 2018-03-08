@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Visualização de médicos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Ultimo Nome</th>
+            <th>Especialidade</th>
+            <th>Email</th>
+            <th>Ativo</th>
+            <th>Status</th>
+            <th>Estado</th>
+            <th>Cidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medico of lista_medicos">
+            <td>{{medico.nome}}</td>
+            <td>{{medico.sobrenome}}</td>
+            <td>{{medico.especialidade}}</td>
+            <td>{{medico.email}}</td>
+            <td>{{medico.ativo}}</td>
+            <td>{{medico.status}}</td>
+            <td>{{medico.estado}}</td>
+            <td>{{medico.cidade}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+
+</ion-content>
