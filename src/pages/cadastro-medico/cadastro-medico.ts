@@ -32,6 +32,7 @@ export class CadastroMedicoPage {
   medico = {
     nome: '',
     sobrenome: '',
+    email: '',
     ativo: '',
     status: '',
     estado: '',
@@ -49,11 +50,28 @@ export class CadastroMedicoPage {
 
   cadastrar() {
     this.medicoProvider.cadastrarMedico(this.medico).subscribe(() =>{
+    },error =>{
+      console.log(error);
     });
     
     
     this.alertSucesso();
     console.log(this.medico)
+    this.limpaForm();
+
   }
 
+  limpaForm(){
+    this.medico = {
+      nome: '',
+      sobrenome: '',
+      email: '',
+      ativo: '',
+      status: '',
+      estado: '',
+      cidade: ''
+    };
+  }
+
+  
 }

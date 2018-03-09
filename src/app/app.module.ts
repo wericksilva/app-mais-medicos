@@ -1,3 +1,4 @@
+import { LoginPageModule } from './../pages/login/login.module';
 import { PesquisaMedicoPageModule } from './../pages/pesquisa-medico/pesquisa-medico.module';
 import { CadastroMedicoPageModule } from './../pages/cadastro-medico/cadastro-medico.module';
 import { CadastroMedicoPage } from './../pages/cadastro-medico/cadastro-medico';
@@ -28,6 +29,7 @@ import { PesquisaMedicoPage } from '../pages/pesquisa-medico/pesquisa-medico';
     BrowserModule,
     HttpModule,
     CadastroMedicoPageModule,
+    LoginPageModule,
     PesquisaMedicoPageModule,
     IonicModule.forRoot(MyApp)
   ],

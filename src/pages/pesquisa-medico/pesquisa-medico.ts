@@ -27,10 +27,8 @@ export class PesquisaMedicoPage {
     public navParams: NavParams,
     private medicoProvider: MedicoProvider) {
   
-  }
+      this.pesquisarMedicos();
 
-  ionViewDidLoad() {
-    this.pesquisarMedicos();
   }
 
   pesquisarMedicos() {
