@@ -1,1 +1,8 @@
-### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/tabs) repo! :point_left:
+Projeto desafio mais medico
+
+Porjeto feito em ionic3 e node.js
+
+para rodar o projeto. execute os seguintes comandos.
+
+- npm install
+- ionic serve 
